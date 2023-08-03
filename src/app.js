@@ -2,6 +2,7 @@ import express from "express";
 //import exphbs from 'express-handlebars'
 import path from 'path'
 import indexRoutes from './routes/index.routes'
+import morgan from 'morgan'
 
 const app = express()
 const exphbs = require('express-handlebars').engine
