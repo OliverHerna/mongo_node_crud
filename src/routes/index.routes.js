@@ -28,6 +28,16 @@ router.post("/edit/:id", async(req,res ) => {
     res.redirect("/")
 });
 
+router.get("/delete/:id", async (req,res) => {
+    try {
+        const task = await Task.findByIdAndDelete(req.params.id) 
+        res.redirect("/")
+    } catch (error) {
+        console.log(error)
+    }
+    
+
+})
 
 router.post('/tasks/add', async(req, res) => {
     try {
