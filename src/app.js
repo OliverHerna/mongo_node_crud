@@ -20,6 +20,11 @@ app.engine(".hbs",exphbs({
 //definir motor de plantilla
 app.set('view-engine', '.hbs')
 
+// middlwares
+app.use(morgan('dev'));
+app.use(express.urlencoded({ extended:false }));
+
+
 //routes
 app.use(indexRoutes)
 
